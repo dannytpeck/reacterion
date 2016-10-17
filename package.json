@@ -10,7 +10,7 @@
     "build": "webpack -p --define process.env.NODE_ENV='\"production\"' --progress --colors",
     "test": ""
   },
-  "author": "",
+  "author": "Danny Peck",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.2.1",
