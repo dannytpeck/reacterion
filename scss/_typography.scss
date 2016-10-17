@@ -1,0 +1,24 @@
+// Open Sans for body copy (and if lowercase will be used at all)
+// add @include / call for Arquitecta
+// https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+// Arquitecta for only all caps (logo font)(bold, heavy, or black)
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,300italic,400italic,700italic);
+
+$font: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+
+body
+{
+	font-family: $font;
+	background-color: $background-color;
+	color: $text-gray;
+};
+.logo-font
+{
+	@include font-face("arquitecta", "../fonts/latinotype_-_arquitectamedium-webfont", medium, $file-formats: eot woff woff2 tff svg);
+	@include font-face("arquitecta", "../fonts/latinotype_-_arquitectamedium-italic-webfont", medium, italic, $file-formats: eot woff tff svg);
+	@include font-face("arquitecta", "../fonts/latinotype_-_arquitectalight-webfont", light, $file-formats: eot woff woff2 tff svg);
+	@include font-face("arquitecta", "../fonts/latinotype_-_arquitectalight-italic-webfont", light, italic, $file-formats: eot woff tff svg);
+	color: $logo-red;
+	text-transform: uppercase;
+}

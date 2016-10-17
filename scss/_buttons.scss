@@ -1,0 +1,28 @@
+@import "_media-queries";
+
+$base-line-height: 1.5em !default;
+
+.button {
+      text-decoration:none;
+      font-size:12px;
+      font-weight:bold;
+      padding:0 15px;
+      line-height:32px;
+      height: auto;
+      display:inline-block;
+      text-align:center;
+      background-color: $logo-red;
+      color: $white;
+      border-radius: 3px;
+      text-transform: uppercase;
+
+         @include media($medium-screen) {
+          margin-bottom: 0;
+          width: auto;
+         }
+}
+
+// opens editing panel on select-CIEs.php
+.editCIE {
+   float: right;
+}

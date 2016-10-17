@@ -1,0 +1,79 @@
+// mobile breakpoint variable
+$mobile: new-breakpoint(max-width 500px 4);
+/* to use:
+.element {
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+  }
+*/
+
+#wrapper {
+   @include outer-container;
+   @include media($mobile) {
+     @include span-columns(4);
+   }
+   max-width: 1920px;
+   padding: 0px 50px 10px 50px;
+   h3 {
+      color: $secondary-red;
+   }
+}
+
+#header {
+   @include span-columns(12);
+}
+
+// sets number of columns element will span
+.cols-1 {
+  @include span-columns(1);
+}
+.cols-2 {
+  @include span-columns(2);
+}
+.cols-3 {
+  @include span-columns(3);
+}
+.cols-4 {
+  @include span-columns(4);
+}
+.cols-5 {
+   @include span-columns(5);
+}
+.cols-6 {
+  @include span-columns(6);
+}
+.cols-7 {
+   @include span-columns(7)
+}
+.cols-8 {
+  @include span-columns(8);
+}
+.cols-9 {
+  @include span-columns(9);
+}
+.cols-10 {
+  @include span-columns(10);
+}
+.cols-11 {
+  @include span-columns(11);
+}
+.cols-12 {
+   @include span-columns(12);
+}
+
+// omega removes the right gutter from an element
+// use on last element in grid that will repeat to prevent grid from breaking
+.cols-last {
+   @include omega;
+}
+
+// resets silly default margin and padding so navbar sits properly
+html, body {
+   margin: 0;
+   padding: 0;
+}
+
+.center {
+   text-align: center;
+}

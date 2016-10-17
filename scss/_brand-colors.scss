@@ -1,0 +1,28 @@
+// Brand Colors
+
+// reds
+$logo-red: #d92c27; //heat; used for logo, header; larger headers all caps and $logo-red
+
+$secondary-red: #a42022; //blaze; red used when not logo
+
+// blues
+// (note: support documents always use blues)
+$primary-blue: #3d6274; //ember; header (if $logo-red can't be used)
+
+$secondary-blue: #0080a5; //argon; secondary blue if $secondary-red cannot be used
+
+$tertiary-cyan: #83D2E2; //offsets darker palettes but should be used rarely
+
+$tertiary-yellow: #FECC66; //offsets darker palettes but should be used rarely
+
+$tertiary-light-yellow: #F5EF83; //offsets darker palettes but should be used rarely
+
+// grays
+$text-gray: #463e38; //coal; used for a lot of copy
+
+$secondary-gray: #bbb4ab; //ash
+
+$tertiary-gray: #E2F2EF; //offsets darker palettes but should be used rarely
+
+$white: #fff;
+$background-color: $white; //white; standard background color

@@ -1,0 +1,76 @@
+// creating limeade branding varaiables
+$limeade-font-color: #555;
+
+
+.tile-container {
+   //display:none;
+   width: 440px;
+}
+
+// FIXME: fix border radius
+// FIXME: add drop shadow
+.limeade-tile {
+   font-family: $helvetica;
+   min-width: 440px;
+   max-width: 440px;
+   color: $limeade-font-color;
+   border: solid 1px $secondary-gray;
+   @include border-top-radius(4px);
+   @include border-bottom-radius(4px);
+}
+
+.limeade-image {
+   max-width: 100%;
+}
+
+.limeade-image img {
+   max-height: 200px;
+   @include border-top-radius(4px);
+   @include border-bottom-radius(0px);
+}
+
+.limeade-more-info {
+   padding: 30px 20px 15px 20px;
+}
+
+// FIXME: Fix text-wrapping
+.limeade-title {
+   min-width: 250px;
+   display: inline;
+   font-weight: bold;
+   font-size: 20px;
+   line-height: 1.4em;
+}
+
+.limeade-points {
+   min-width: 74 px;
+   display: inline;
+   float: right;
+}
+
+// TODO: Decide if necessary or not due to Trumbowyg.
+.limeade-description {
+   padding: 0 20px 20px 20px;
+   font-size: 14px;
+   line-height: 1.3em;
+}
+
+.limeade-info-actions {
+   background-color: #f1f2f3;
+   height: 70px;
+   display: block;
+   text-align: center;
+}
+
+.limeade-button-container button {
+   background-color: $secondary-red;
+   color: $background-color;
+   font-size: 13px;
+   font-weight: bold;
+   padding: 5px 10px;
+   text-align: center;
+   border: 1px solid lighten($secondary-red, 10%);
+   @include border-top-radius(2px);
+   @include border-bottom-radius(2px);
+   margin: 21px auto;
+}

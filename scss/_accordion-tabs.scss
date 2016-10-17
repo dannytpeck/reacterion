@@ -1,0 +1,135 @@
+/*
+to use:
+
+HTML
+
+<ul class="accordion-tabs">
+  <li class="tab-header-and-content">
+    <a href="javascript:void(0)" class="is-active tab-link">Tab Item</a>
+    <div class="tab-content">
+      <p>Content 1</p>
+    </div>
+  </li>
+  <li class="tab-header-and-content">
+    <a href="javascript:void(0)" class="tab-link">Another Tab</a>
+    <div class="tab-content">
+      <p>Content 2</p>
+    </div>
+  </li>
+  <li class="tab-header-and-content">
+    <a href="javascript:void(0)" class="tab-link">Third</a>
+    <div class="tab-content">
+      <p>Content 3</p>
+    </div>
+  </li>
+  <li class="tab-header-and-content">
+    <a href="javascript:void(0)" class="tab-link">Last Item</a>
+    <div class="tab-content">
+      <p>Content 4</p>
+    </div>
+  </li>
+</ul>
+
+
+*/
+
+.accordion-tabs {
+  $base-border-color: $secondary-gray;
+  $base-border-radius: 3px !default;
+  $base-background-color: #fff !default;
+  $base-spacing: 1.5em !default;
+  $action-color: $secondary-red;
+  $dark-gray: #333 !default;
+  $light-gray: #ddd !default;
+  $medium-screen: 50em;
+  $tab-border: 1px solid $base-border-color;
+  $tab-content-background: $base-background-color;
+  $tab-active-background: $tab-content-background;
+  $tab-inactive-color: $base-background-color;
+  $tab-inactive-hover-color: darken($light-gray, 5);
+  $tab-mode: $medium-screen;
+
+  @include clearfix;
+  line-height: 1.5;
+  margin-bottom: $base-spacing;
+  padding: 0;
+
+  @include media(max-width $tab-mode) {
+    border: $tab-border;
+    border-radius: $base-border-radius;
+  }
+
+  .tab-header-and-content {
+    list-style: none;
+
+    @include media($tab-mode) {
+      display: inline;
+    }
+
+    &:first-child .tab-link {
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+
+      @include media(max-width $tab-mode) {
+        border-top: 0;
+      }
+    }
+
+    &:last-child .tab-link {
+      @include media(max-width $tab-mode) {
+        border-bottom-left-radius: $base-border-radius;
+        border-bottom-right-radius: $base-border-radius;
+      }
+    }
+  }
+
+  .tab-link {
+    background-color: $tab-inactive-color;
+    border-top: $tab-border;
+    color: $dark-gray;
+    display: block;
+    font-weight: bold;
+    padding: ($base-spacing / 2) ($gutter / 2);
+    text-decoration: none;
+
+    @include media($tab-mode) {
+      @include border-top-radius($base-border-radius);
+      border-top: 0;
+      display: inline-block;
+    }
+
+    &:hover {
+      color: $action-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.is-active {
+      background-color: $tab-active-background;
+
+      @include media($tab-mode) {
+        background-color: $tab-active-background;
+        border: $tab-border;
+        border-bottom-color: $tab-active-background;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  .tab-content {
+    background: $tab-content-background;
+    display: none;
+    padding: $base-spacing $gutter;
+    width: 100%;
+
+    @include media($tab-mode) {
+      border: $tab-border;
+      border-bottom-left-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      float: left;
+    }
+  }
+}

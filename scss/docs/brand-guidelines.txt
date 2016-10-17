@@ -1,0 +1,43 @@
+--Brand Colors Specifications:
+
+https://challenges.mywellnessnumbers.com/aduro-color-palette-2015/
+
+primary red (heat) (logo)
+#d92c27
+
+secondary red (blaze)
+#a42022
+
+primary blue (ember)
+#3d6274
+
+secondary blue (argon)
+#0080a5
+
+primary gray (coal)
+#463e38
+
+secondary gray (ash)
+#bbb4ab
+
+
+--Specifications from Design
+background color
+white
+
+headers
+heat
+ember (if heat can't be used)
+
+support documents always uses blue
+
+
+bright blue is secondary to bright red (if bright red cannot be used)
+
+larger headers all caps and red
+
+use dark grey (coal) for a lot of copy
+
+fonts
+Arquitecta for only all caps (logo font)(bold, heavy, or black)
+open sans for body copy (and if lowercase will be used at all)
